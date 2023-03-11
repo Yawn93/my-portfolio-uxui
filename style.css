@@ -1,0 +1,155 @@
+body {
+    width: 100%;
+    margin: auto;
+  }
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+  .link {
+    font-size: 14px;
+  }
+
+  .link a{
+    color: #1E1E1E;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #1E1E1E;
+    text-decoration: none;
+  }
+
+  .topnav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+  }
+
+
+  .herosection {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    
+  }
+
+  .leftcol {
+    text-align: left;
+    font-size: 64px;
+    font-weight: bold;
+  }
+
+  .leftcol p{
+    text-align: left;
+    font-size: 14px;
+    font-weight: lighter;
+    margin-top: 40px;
+  }
+
+  .imgright {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .myimage {
+    width: 100%;
+  }
+
+  .buttongrey {
+    border-radius: 30px;
+    background-color: #1E1E1E;
+    border: 1px solid #1E1E1E;
+    color: white;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .buttongrey:hover {
+    border: 1px solid #707070;
+    background-color: #707070;
+    color: white;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .buttongrey:active {
+    background-color: white;
+    color: #1E1E1E;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+.portfolio {
+  margin-top: 100px;
+}
+
+  .portfolio h1 {
+    text-align: center;
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+
+  .col-md-4 {
+    background-color: #e6e6e6;
+    justify-content: center;
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .col-md-4 img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  .gallery .col-md-4 {
+    padding: 20px;
+    background-color: white;
+  }
+
+  .contact {
+    text-align: center;
+    font-size: 55px;
+    font-weight: bold;
+  }
+
+  .letmeknow {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .contactme {
+  margin-top: 100px;
+}
+
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  gap:30px;
+  margin: 50px 0px;
+}
+
+.socialmedia img {
+width: 30px;
+height: auto;
+}
+
+.footer {
+  background-color: #1E1E1E;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer {
+  padding: 20px;
+}
+
+.rounded {
+  vertical-align: -webkit-baseline-middle;
+  margin-left: 20px;
+}
