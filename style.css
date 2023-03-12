@@ -147,14 +147,6 @@ width: 30px;
 height: auto;
 }
 
-footer {
-  background-color: #1E1E1E;
-  color: white;
-  text-align: center;
-  font-size: 14px;
-  padding: 20px;
-}
-
 .rounded {
   vertical-align: -webkit-baseline-middle;
   margin-left: 20px;
