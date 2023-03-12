@@ -156,3 +156,7 @@ height: auto;
   vertical-align: -webkit-baseline-middle;
   margin-left: 20px;
 }
+
+footer {
+  margin-bottom: 0;
+}
