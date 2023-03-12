@@ -1,17 +1,15 @@
-body {
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-  }
-
-  html, 
+ html, 
   body {
     height: 100%;
+    width: 100%;
+    min-height: 100%;
 }
 
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/* nav bar */
 
   .link {
     font-size: 14px;
@@ -34,6 +32,7 @@ body {
     height: auto;
   }
 
+/* hero section */
 
   .herosection {
     width: 100%;
@@ -99,6 +98,8 @@ body {
     margin-bottom: 50px;
   }
 
+/* gallery flex */
+
   .col-md-4 {
     display: flex;
     flex-wrap: wrap;
@@ -124,6 +125,8 @@ body {
     padding: 20px;
     background-color: white;
   }
+
+  /* contact me section */
 
   .contact {
     text-align: center;
@@ -156,6 +159,8 @@ height: auto;
   vertical-align: -webkit-baseline-middle;
   margin-left: 20px;
 }
+
+/* footer */
 
 footer {
   left: 0;
