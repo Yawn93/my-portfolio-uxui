@@ -224,3 +224,15 @@ height: auto;
 .project {
   margin-bottom: 40px;
 }
+
+.project-link {
+  color: #1E1E1E;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.project-link:hover {
+  color: #1E1E1E;
+  text-decoration: none;
+  font-weight: bold;
+}
