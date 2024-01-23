@@ -176,6 +176,12 @@
       border-radius: 5px;
     }
 
+    .main-project img:hover {
+      opacity: 0.6;
+      cursor: pointer;
+      transform: scale(1);
+    }
+
     @media (max-width: 768px) {
       .main-project {
         flex: 1 0 100%; 
