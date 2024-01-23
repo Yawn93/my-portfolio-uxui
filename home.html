@@ -26,11 +26,11 @@
   </div>
         <div class="container herosection" id="aboutme">
           <div class="row">
-            <div class="col-md-6 col-lg-6 leftcol">Hi,<br>there 👋
-            <p>My name is Beatriz St.Aubyn and I am a UX/UI Designer.
-              Although my first love is Design, I also have a crush on coding 👩‍💻
+            <div class="col-md-6 col-lg-6 leftcol">Hi, there 👋
+            <p>My name is Beatriz St.Aubyn and I am a UX/UI Designer<br> and a Junior Front-end Developer 👩‍💻
               <br>
-              Let’s NOT keep it a secret...</p>
+              <br>
+              "Make it simple, but significant" <br><em>- Don Draper</em></p>
               <a href="img\cv_beatriz.pdf" download="cv_beatriz.pdf" target="_blank"><button class="buttongrey">My Resume</button></a><img class="rounded" src="img\rounded.png"></div>
             <div class="col-md-6 col-lg-6">
               <img class="myimage" src="img\frame.png">
@@ -114,13 +114,13 @@
 
         const category = this.getAttribute('data-category');
 
-        // Show all projects when "All" is selected
+
         if (category === 'all') {
           projects.forEach(project => {
             project.style.display = 'flex';
           });
         } else {
-          // Show projects of the selected category, hide others
+
           projects.forEach(project => {
             const projectCategories = project.getAttribute('data-category').split(' ');
             const projectId = project.getAttribute('id');
