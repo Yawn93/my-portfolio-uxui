@@ -54,11 +54,6 @@
     margin-top: 40px;
   }
 
-  .imgright {
-    display: flex;
-    margin: 0 auto;
-  }
-
   .myimage {
     width: 100%;
   }
@@ -363,4 +358,26 @@ height: auto;
 
 .project {
   border: none;
+}
+
+/* animations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.leftcol,
+.myimage, .portfolio {
+  animation: fadeIn 1s ease-out;
+}
+
+.row {
+  overflow: hidden;
 }
