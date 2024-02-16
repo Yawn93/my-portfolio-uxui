@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
           <a class="navbar-brand" href="https://my-portfolio-beatriz.netlify.app/"><strong>BEATRIZ ST.AUBYN</strong></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -136,9 +136,30 @@
     <div class="container project">
         <h4>Want to see more projects?</h4>
         <div class="row gallery">
-            <div class="col-md-4 col-lg-4"><a href="../projects/brussels-garden.html" target="_blank"><img src="..\img\brussels_garden.png"></a></div>
-            <div class="col-md-4 col-lg-4"><a href="../projects/dashboard.html" target="_blank"><img src="..\img\happy_daze.png"></a></div>
-            <div class="col-md-4 col-lg-4"><a href="../projects/asys.html" target="_blank"><img src="..\img\asys.png"></a></div>
+            <div class="col-md-4 col-lg-4">
+                <a href="../projects/brussels-garden.html" target="_blank" class="project-link">
+                    <img src="..\img\brussels_garden.png">
+                    <div class="overlay">
+                        <button class="overlay-button" href="../projects/brussels-garden.html">View Project</button>
+                      </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <a href="../projects/dashboard.html" target="_blank" class="project-link">
+                    <img src="..\img\happy_daze.png">
+                    <div class="overlay">
+                        <button class="overlay-button" href="../projects/dashboard.html">View Project</button>
+                      </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <a href="../projects/asys.html" target="_blank" class="project-link">
+                    <img src="..\img\asys.png">
+                    <div class="overlay">
+                        <button class="overlay-button" href="../projects/asys.html">View Project</button>
+                      </div>
+                </a>
+            </div>
           </div>
     </div>
 
