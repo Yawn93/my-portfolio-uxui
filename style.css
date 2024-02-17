@@ -325,8 +325,8 @@
 }
 
 .socialmedia img {
-width: 30px;
-height: auto;
+  width: 30px;
+  height: auto;
 }
 
 .rounded {
@@ -344,12 +344,23 @@ footer {
 /* Second page - project page */
 
 .rectangle {
-width: 100%;
-height: auto; 
-border: 1px solid #1E1E1E; 
-border-radius: 3px;
-padding: 15px;
+  width: 100%;
+  height: auto; 
+  border: 1px solid #1E1E1E; 
+  border-radius: 3px;
+  padding: 15px;
 }
+
+.github {
+  color: white;
+}
+
+.github:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+
 
 /* mobile */
 
