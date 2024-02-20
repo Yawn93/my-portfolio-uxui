@@ -1,3 +1,6 @@
+
+https://my-portfolio-beatriz.netlify.app/
+
 Log:
 
 20/01/2024  - (✔️Done) added a new template for projects
@@ -7,4 +10,4 @@ Log:
             - (🚧WIP) creating a filter for types of projects
 
 22/01/2024  - (✔️Done) project filter for main gallery created
-            - (🚧WIP) small UI improvements TBD
+            - (✔️Done) small UI improvements TBD
