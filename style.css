@@ -266,6 +266,10 @@
       .gallery-filter-info {
         display: none;
       }
+
+      .filter-gallery {
+        font-size: 12px;
+      }
     }
 
     /* main page gallery */
