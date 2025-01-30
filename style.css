@@ -405,11 +405,12 @@ html {
         padding-left: 20px !important;
         padding-right: 20px !important;
         align-items: center;
-        text-align: center;
+        text-align: center !important;
       }
     
       .contact {
         font-size: 16px;
+        text-align: center !important;
       }
     
       .letmeknow {
