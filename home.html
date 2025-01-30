@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>👩‍💻 Beatriz Portfolio</title>
 </head>
@@ -26,28 +29,33 @@
       </div>
     </nav>
   </div>
-        <div class="container herosection" id="aboutme">
-          <div class="row">
-            <div class="col-md-6 col-lg-6 leftcol">Hi, there 👋
-            <p>My name is Beatriz St.Aubyn and I am a UX Engineer and Web Designer 👩‍💻
-              <br>
-              <br>
-              "Make it simple, but significant" <br><em>- Don Draper</em></p>
-              <a href="img\CV-Beatriz.pdf" download="cv-beatriz-st-aubyn.pdf" target="_blank"><button class="buttongrey">My Resume</button></a><img class="rounded" src="img\rounded.png"></div>
-            <div class="col-md-6 col-lg-6">
-              <img class="myimage" src="img\frame.png" alt="beatriz image">
-            </div>
-          </div>
-        </div>
+  <div class="herosection" id="aboutme">
+    <div class="row">
+      <div class="col-md-6 col-lg-6 leftcol">
+        <h1 class="title">MULTIDISCIPLINARY<br> DESIGNER <br><span class="dev"><em>(AND DEV!)</em></span></h1>
+        <br>
+        <p>I’m a curious, creative problem-solver with a love for learning. I dive into everything from design to coding, bringing products to life from concept to completion. With a wide range of hobbies and a passion for trying new things, I’m always exploring new ideas and finding ways to innovate.</p>
+        <a href="img\CV-Beatriz.pdf" download="cv-beatriz-st-aubyn.pdf" target="_blank">
+          <button class="buttongrey">My Resume</button>
+        </a>
+        <img class="rounded" src="img\rounded.png">
+      </div>
+      <div class="col-md-6 col-lg-6">
+        <img class="myimage" src="img\frame23.png" alt="beatriz image">
+      </div>
+    </div>
+  </div>
 
-        <div class="container portfolio" id="portfolio">
-          <h1>My Portfolio</h1>
-          <div class="row filter-gallery">
-            <span class="gallery-filter-info">Filter by:</span>
-            <span class="nav-item gallery-filter" data-category="all">All</span>
-            <span class="nav-item gallery-filter" data-category="ui-design">UI Design</span>
-            <span class="nav-item gallery-filter" data-category="ux-design">UX Design</span>
-            <span class="nav-item gallery-filter" data-category="front-end">Code</span>
+        <div class="portfolio" id="portfolio">
+          <div class="portfolio-header">
+            <h2>My Portfolio</h2>
+            <div class="row filter-gallery">
+              <span class="gallery-filter-info">Filter by:</span>
+              <span class="nav-item gallery-filter" data-category="all">All</span>
+              <span class="nav-item gallery-filter" data-category="ui-design">UI Design</span>
+              <span class="nav-item gallery-filter" data-category="ux-design">UX Design</span>
+              <span class="nav-item gallery-filter" data-category="front-end">Code</span>
+            </div>
           </div>
           <div class="main-gallery" id="project-container">
             <div class="main-project" id="project1" data-category="front-end">
@@ -117,9 +125,11 @@
           </div>
         </div>
 
-        <div class="container contactme" id="contact">
-          <p class="contact">Did you enjoy my work?</p>
-          <p class="letmeknow">Let me know ⬇️</p>
+        <div class="contactme" id="contact">
+          <div>
+            <p class="contact">Did you enjoy my work?</p>
+            <p class="letmeknow">Let me know →</p>
+          </div>
           <div class="socialmedia">
             <a href="https://www.behance.net/beatrizsousastaubyn" target="_blank"><img src="img\behance.png" alt="behance logo"></a>
             <a href="https://github.com/Yawn93" target="_blank"><img src="img\github.png" alt="github logo"></a>
@@ -130,50 +140,71 @@
           </div>
         </div>
 
+        <footer style="background-color: white;">
+          <!-- Grid container -->
+          <div class="footer-info"> © 2025 Copyright: Beatriz St.Aubyn | Check it out on <a href="https://github.com/Yawn93/my-portfolio-uxui" class="github">github</a></div>
+          <div class="footer-info"><a href="#" class="github">Scroll to top ↑</a></div>
+        </footer>
+
 <!--    gallery filters  -->
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
     const filterLinks = document.querySelectorAll('.gallery-filter');
     const projects = document.querySelectorAll('.main-project');
 
     filterLinks.forEach(link => {
-      link.addEventListener('click', function () {
-          filterLinks.forEach(filterLink => {
-          filterLink.classList.remove('active');
-        });
-        this.classList.add('active');
+        link.addEventListener('click', function () {
+            filterLinks.forEach(filterLink => {
+                filterLink.classList.remove('active');
+            });
+            this.classList.add('active');
 
-        const category = this.getAttribute('data-category');
+            const category = this.getAttribute('data-category');
 
-
-        if (category === 'all') {
-          projects.forEach(project => {
-            project.style.display = 'flex';
-          });
-        } else {
-
-          projects.forEach(project => {
-            const projectCategories = project.getAttribute('data-category').split(' ');
-            const projectId = project.getAttribute('id');
-
-            if (projectCategories.includes(category)) {
-              project.style.display = 'flex';
+            if (category === 'all') {
+                projects.forEach(project => {
+                    project.style.display = 'block';
+                });
             } else {
-              project.style.display = 'none';
+                projects.forEach(project => {
+                    const projectCategories = project.getAttribute('data-category').split(' ');
+                    if (projectCategories.includes(category)) {
+                        project.style.display = 'block';
+                    } else {
+                        project.style.display = 'none';
+                    }
+                });
             }
-          });
-        }
-      });
+
+            // Adjust the layout of the gallery container
+            adjustGalleryLayout();
+        });
     });
-  });
+
+    function adjustGalleryLayout() {
+        const visibleProjects = Array.from(projects).filter(project => project.style.display === 'block');
+        const gallery = document.querySelector('.gallery');
+        gallery.style.display = 'flex';
+        gallery.style.flexWrap = 'wrap';
+        visibleProjects.forEach(project => {
+            project.style.flex = '1 0 33.33%'; // Adjust this value based on the number of columns you want
+        });
+    }
+
+    // Initial adjustment
+    adjustGalleryLayout();
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const myImage = document.querySelector('.myimage');
+      if (myImage) {
+          myImage.addEventListener('click', function() {
+              myImage.classList.toggle('clicked');
+          });
+      }
+  });
+  </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        
-        <footer class="text-center text-white" style="background-color: #1e1e1e;">
-          <!-- Grid container -->
-          <div class="container p-4"> © 2023 Copyright: Beatriz St.Aubyn | Check it out on <a href="https://github.com/Yawn93/my-portfolio-uxui" class="github">github</a></div>
-        </footer>
 </body>
 </html>

@@ -1,12 +1,9 @@
- html, 
-  body {
-    height: 100%;
-    width: 100%;
-    min-height: 100%;
+html {
+  scroll-behavior: smooth;
 }
 
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Inter", serif;
 }
 
 /* nav bar */
@@ -32,34 +29,62 @@
     height: auto;
   }
 
+  .navbar {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
 /* hero section */
 
   .herosection {
     width: 100%;
     height: auto;
-    margin-top: 60px;
+    padding: 60px 100px 60px 100px;
+    margin-top: 100px;
     
   }
 
-  .leftcol {
-    text-align: left;
+  .project-description-section {
+    width: 100%;
+    height: auto;
+    padding: 60px 20px;
+    margin-top: 32px;
+    
+  }
+
+  .title{
+    line-height: 1.1;
     font-size: 64px;
+    text-align: left;
     font-weight: bold;
   }
 
   .leftcol p{
     text-align: left;
-    font-size: 16px;
-    font-weight: lighter;
-    margin-top: 40px;
-    width: 80%;
+    font-size: 20px;
+    margin-top: 16px;
+    width: 90%;
   }
 
   .myimage {
-    width: 100%;
+    width: 90%;
+    height: auto;
+    position: relative;
+    top: -80px;
+    transition: transform 1s, top 1s;
+    cursor: url('img/cursor.png'), auto;
+}
+
+.myimage.clicked {
+  transform: rotate(360deg);
+}
+
+  .dev{
+    font-weight: lighter;
   }
 
   .buttongrey {
+    margin-top: 24px;
     border-radius: 30px;
     background-color: #1E1E1E;
     border: 1px solid #1E1E1E;
@@ -83,15 +108,25 @@
     padding: 15px;
   }
 
-.portfolio {
-  margin-top: 100px;
-}
+  .portfolio {
+    background-color: #1E1E1E;
+    width: 100%;
+    height: auto;
+    padding: 80px 100px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+  }
 
-  .portfolio h1 {
-    text-align: center;
-    font-size: 55px;
+  .portfolio-header{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  .portfolio-header h2 {
     font-weight: bold;
-    margin-bottom: 50px;
   }
 
 /* gallery flex */
@@ -99,7 +134,7 @@
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      margin: 0 auto;
+      width: 100%;
 
     }
 
@@ -199,14 +234,14 @@
 
     .filter-gallery {
       display: flex;
-      margin: 0 auto;
+      justify-content: end;
       gap: 15px;
     }
 
     .main-project {
-      flex: 1 0 calc(33.33% - 20px); /* Three projects per row with 10px gap */
-      max-width: calc(33.33% - 20px);
+      flex: 1 0 33.33%; /* Adjust this value based on the number of columns you want */
       box-sizing: border-box;
+      padding: 10px;
     }
 
     .main-project img {
@@ -223,57 +258,181 @@
     }
 
     /* mobile */
+    @media (min-width: 1281px) and (max-width: 1600px) {
+      .myimage {
+        top: 20px;
+      }
+    }
 
-    @media (max-width: 768px) {
-      .main-project {
-        flex: 1 0 100%; 
-        max-width: 100%;
-      }
-      .col-md-4{
-        flex: 1 0 100%; 
-        max-width: 100%;
-      }
-      .leftcol {
+    @media (max-width: 1280px) {
+      .title{
         font-size: 48px;
       }
-      .leftcol p {
-        width: 100%;
-      }
+
       .myimage {
-        margin-top: 20px;
+        top: 0px;
       }
+
+      .leftcol p {
+        font-size: 16px;
+      }
+
+      .contact {
+        font-size: 20px;
+        text-align: left !important;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .title{
+        font-size: 48px;
+      }
+
+      .myimage {
+        top: 100px;
+      }
+
+      .leftcol p {
+        font-size: 16px;
+      }
+
+      .contact {
+        font-size: 20px;
+        text-align: left !important;
+      }
+    }
+    
+    @media (max-width: 992px) {
+      .title {
+        font-size: 40px;
+      }
+
+      .leftcol p {
+        font-size: 16px;
+      }
+
+      .contactme {
+        flex-direction: column;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .contact {
+        font-size: 20px;
+      }
+    
+      .letmeknow {
+        font-size: 16px;
+      }
+    
+      .socialmedia {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        gap: 16px !important;
+      }
+    
+      .socialmedia img {
+        width: 40px !important;
+      }
+  }
+
+    @media (max-width: 820px) {
+
+      .project-description-section{
+        padding: 40px 20px 0px 20px;
+      }
+
+      .navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    
       .herosection {
+        padding: 20px;
         margin-top: 80px;
       }
+    
+      .title {
+        font-size: 32px;
+      }
+    
+      .leftcol p {
+        font-size: 16px;
+        width: 100%;
+      }
+    
+      .myimage {
+        top: 0px;
+      }
+    
       .portfolio {
-        margin-top: 50px;
-      }
-      #contact {
-        margin-top: 50px;
-      }
-      .portfolio h1 {
-        font-size: 36px;
+        padding: 40px 20px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
       }
 
-      #contact .contact {
-        font-size: 36px;
+      .filter-gallery{
+        justify-content: flex-start;
+        padding-left: 20px;
+        margin-top: 16px;
       }
 
-      #contact .letmeknow {
-        font-size: 28px;
-      }
-
-      .gallery-filter-info {
+      .gallery-filter-info{
         display: none;
       }
-
-      .filter-gallery {
-        gap: 7px;
+    
+      .portfolio-header {
+        display: block;
       }
 
-      .gallery-filter {
-        font-size: 12px;
-        padding: 5px 5px;
+      .portfolio-header h2 {
+        font-weight: bold;
+      }
+    
+      .gallery {
+        gap: 10px;
+      }
+    
+      .main-project {
+        flex: 1 0 100%;
+        max-width: 100%;
+      }
+    
+      .contactme {
+        flex-direction: column;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .contact {
+        font-size: 20px;
+      }
+    
+      .letmeknow {
+        font-size: 16px;
+      }
+    
+      .socialmedia {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        gap: 16px !important;
+      }
+    
+      .socialmedia img {
+        width: 40px !important;
+      }
+
+      footer {
+        padding: 20px !important;
+        display: block !important;
+        text-align: center;
+      }
+      .footer-info {
+        width: 100%;
       }
     }
 
@@ -284,6 +443,7 @@
       flex-wrap: wrap;
       margin: 0 auto;
       gap: 20px;
+      width: 100%;
     }
 
     .main-project {
@@ -316,28 +476,35 @@
 
   .contact {
     text-align: center;
-    font-size: 55px;
+    font-size: 32px;
     font-weight: bold;
   }
 
   .letmeknow {
-    text-align: center;
-    font-size: 36px;
+    font-size: 24px;
   }
 
   .contactme {
-  margin-top: 100px;
-}
+    color: white;
+    background-color: #1E1E1E;
+    margin-top: 0px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 
 .socialmedia {
   display: flex;
   justify-content: center;
   gap:30px;
-  margin: 50px 0px;
+  vertical-align: middle;
+  align-items: center;
 }
 
 .socialmedia img {
-  width: 30px;
+  width: 50px;
   height: auto;
 }
 
@@ -351,6 +518,14 @@
 footer {
   left: 0;
   bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.footer-info{
+  padding: 24px 0px;
 }
 
 /* Second page - project page */
@@ -364,11 +539,11 @@ footer {
 }
 
 .github {
-  color: white;
+  color: #1E1E1E;
 }
 
 .github:hover {
-  color: white;
+  color: #1E1E1E;
   text-decoration: underline;
 }
 
@@ -380,6 +555,11 @@ footer {
   .col-sd-12 {
       margin-bottom: 10px;
   }
+}
+
+.project-name{
+  display: flex;
+  gap: 24px;
 }
 
 .buttonback {
@@ -441,8 +621,8 @@ height: auto;
 }
 
 .gallery-filter {
-  color: #1E1E1E;
-  border: 1px solid #1E1E1E;
+  color: white;
+  border: 1px solid white;
   border-radius: 3px;
   font-size: 14px;
   padding: 5px 10px;
@@ -455,7 +635,7 @@ height: auto;
 }
 
 .gallery-filter-info {
-  color: #1E1E1E;
+  color: white;
   font-size: 12px;
   padding: 10px 0px;
 }
@@ -470,17 +650,15 @@ height: auto;
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
 .leftcol,
 .myimage, .portfolio {
-  animation: fadeIn 1s ease-out;
+  animation: fadeIn 0.7s ease-in-out;
 }
 
 .row {
