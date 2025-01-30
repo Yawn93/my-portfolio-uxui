@@ -14,12 +14,12 @@ html {
 
   .link a{
     color: #1E1E1E;
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   a:hover {
     color: #1E1E1E;
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   .topnav {
