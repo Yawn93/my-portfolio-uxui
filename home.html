@@ -204,6 +204,27 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
       const myImage = document.querySelector('.myimage');
+      let spinInterval;
+  
+      function simulateClick() {
+          if (window.innerWidth <= 768) { 
+              if (!spinInterval) {
+                  spinInterval = setInterval(() => {
+                      myImage.click();
+                  }, 4000); 
+              }
+          } else {
+              if (spinInterval) {
+                  clearInterval(spinInterval);
+                  spinInterval = null;
+              }
+          }
+      }
+  
+      simulateClick();
+  
+      window.addEventListener('resize', simulateClick);
+  
       if (myImage) {
           myImage.addEventListener('click', function() {
               myImage.classList.toggle('clicked');
